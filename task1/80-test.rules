@@ -1,0 +1,1 @@
+SUBSYSTEM=="usb", ACTION == "ADD", ENV{DEVTYPE}=="usb_device", RUN+="/bin/copylog.sh"
