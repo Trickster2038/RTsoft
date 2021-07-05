@@ -1,0 +1,1 @@
+cmd_/home/trickster/RTsoft/task2/test.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id=sha1  -T ./scripts/module-common.lds -o /home/trickster/RTsoft/task2/test.ko /home/trickster/RTsoft/task2/test.o /home/trickster/RTsoft/task2/test.mod.o;  true

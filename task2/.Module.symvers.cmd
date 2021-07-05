@@ -1,0 +1,1 @@
+cmd_/home/trickster/RTsoft/task2/Module.symvers := sed 's/ko$$/o/' /home/trickster/RTsoft/task2/modules.order | scripts/mod/modpost -m -a   -o /home/trickster/RTsoft/task2/Module.symvers -e -i Module.symvers   -T -
