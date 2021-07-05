@@ -1,0 +1,720 @@
+[    16.051] (--) Log file renamed from "/var/log/Xorg.pid-1614.log" to "/var/log/Xorg.0.log"
+[    16.057] 
+X.Org X Server 1.20.3
+X Protocol Version 11, Revision 0
+[    16.057] Build Operating System: openSUSE SUSE LINUX
+[    16.057] Current Operating System: Linux localhost 5.3.18-lp152.41-default #1 SMP Thu Sep 3 23:02:59 UTC 2020 (a4d139b) x86_64
+[    16.057] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.3.18-lp152.41-default root=UUID=ae8f8547-d006-4883-9919-4fad55819886 splash=silent mitigations=auto quiet
+[    16.057] Build Date: 25 August 2020  12:00:00PM
+[    16.057]  
+[    16.057] Current version of pixman: 0.34.0
+[    16.057] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[    16.057] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[    16.057] (==) Log file: "/var/log/Xorg.0.log", Time: Mon Jul  5 15:04:33 2021
+[    16.078] (==) Using config directory: "/etc/X11/xorg.conf.d"
+[    16.078] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[    16.088] (==) No Layout section.  Using the first Screen section.
+[    16.088] (==) No screen section available. Using defaults.
+[    16.088] (**) |-->Screen "Default Screen Section" (0)
+[    16.088] (**) |   |-->Monitor "<default monitor>"
+[    16.088] (==) No monitor specified for screen "Default Screen Section".
+	Using a default monitor configuration.
+[    16.088] (==) Automatically adding devices
+[    16.088] (==) Automatically enabling devices
+[    16.088] (==) Automatically adding GPU devices
+[    16.088] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[    16.134] (WW) The directory "/usr/share/fonts/misc/sgi" does not exist.
+[    16.134] 	Entry deleted from font path.
+[    16.144] (==) FontPath set to:
+	/usr/share/fonts/misc:unscaled,
+	/usr/share/fonts/Type1/,
+	/usr/share/fonts/100dpi:unscaled,
+	/usr/share/fonts/75dpi:unscaled,
+	/usr/share/fonts/ghostscript/,
+	/usr/share/fonts/cyrillic:unscaled,
+	/usr/share/fonts/truetype/,
+	built-ins
+[    16.145] (==) ModulePath set to "/usr/lib64/xorg/modules"
+[    16.145] (WW) Ignoring unrecognized extension "XFree86-DGA"
+[    16.145] (II) The server relies on udev to provide the list of input devices.
+	If no devices become available, reconfigure udev or disable AutoAddDevices.
+[    16.145] (II) Loader magic: 0x5649f7ffdd20
+[    16.145] (II) Module ABI versions:
+[    16.145] 	X.Org ANSI C Emulation: 0.4
+[    16.145] 	X.Org Video Driver: 24.0
+[    16.145] 	X.Org XInput driver : 24.1
+[    16.145] 	X.Org Server Extension : 10.0
+[    16.145] (++) using VT number 7
+
+[    16.145] (II) systemd-logind: logind integration requires -keeptty and -keeptty was not provided, disabling logind integration
+[    16.146] (II) xfree86: Adding drm device (/dev/dri/card0)
+[    16.147] (--) PCI:*(1@0:0:0) 10de:1380:1043:84dd rev 162, Mem @ 0xf6000000/16777216, 0xe0000000/268435456, 0xf0000000/33554432, I/O @ 0x0000e000/128, BIOS @ 0x????????/131072
+[    16.147] (II) LoadModule: "glx"
+[    16.147] (II) Loading /usr/lib64/xorg/modules/extensions/libglx.so
+[    16.203] (II) Module glx: vendor="X.Org Foundation"
+[    16.203] 	compiled for 1.20.3, module version = 1.0.0
+[    16.203] 	ABI class: X.Org Server Extension, version 10.0
+[    16.203] (II) Scanning /etc/X11/xorg_pci_ids directory for additional PCI ID's supported by the drivers
+[    16.203] (II) Scanning /etc/X11/xorg_pci_ids directory for additional PCI ID's supported by the drivers
+[    16.203] (==) Matched nvidia as autoconfigured driver 0
+[    16.203] (==) Matched nouveau as autoconfigured driver 1
+[    16.203] (==) Matched nv as autoconfigured driver 2
+[    16.203] (==) Matched modesetting as autoconfigured driver 3
+[    16.203] (==) Matched fbdev as autoconfigured driver 4
+[    16.203] (==) Matched vesa as autoconfigured driver 5
+[    16.203] (==) Assigned the driver to the xf86ConfigLayout
+[    16.203] (II) LoadModule: "nvidia"
+[    16.204] (WW) Warning, couldn't open module nvidia
+[    16.204] (EE) Failed to load module "nvidia" (module does not exist, 0)
+[    16.204] (II) LoadModule: "nouveau"
+[    16.204] (II) Loading /usr/lib64/xorg/modules/drivers/nouveau_drv.so
+[    16.214] (II) Module nouveau: vendor="X.Org Foundation"
+[    16.214] 	compiled for 1.20.3, module version = 1.0.15
+[    16.214] 	Module class: X.Org Video Driver
+[    16.214] 	ABI class: X.Org Video Driver, version 24.0
+[    16.214] (II) LoadModule: "nv"
+[    16.214] (WW) Warning, couldn't open module nv
+[    16.214] (EE) Failed to load module "nv" (module does not exist, 0)
+[    16.214] (II) LoadModule: "modesetting"
+[    16.214] (II) Loading /usr/lib64/xorg/modules/drivers/modesetting_drv.so
+[    16.229] (II) Module modesetting: vendor="X.Org Foundation"
+[    16.229] 	compiled for 1.20.3, module version = 1.20.3
+[    16.229] 	Module class: X.Org Video Driver
+[    16.229] 	ABI class: X.Org Video Driver, version 24.0
+[    16.229] (II) LoadModule: "fbdev"
+[    16.229] (II) Loading /usr/lib64/xorg/modules/drivers/fbdev_drv.so
+[    16.229] (II) Module fbdev: vendor="X.Org Foundation"
+[    16.229] 	compiled for 1.20.3, module version = 0.5.0
+[    16.229] 	Module class: X.Org Video Driver
+[    16.229] 	ABI class: X.Org Video Driver, version 24.0
+[    16.229] (II) LoadModule: "vesa"
+[    16.229] (II) Loading /usr/lib64/xorg/modules/drivers/vesa_drv.so
+[    16.235] (II) Module vesa: vendor="X.Org Foundation"
+[    16.235] 	compiled for 1.20.3, module version = 2.4.0
+[    16.235] 	Module class: X.Org Video Driver
+[    16.235] 	ABI class: X.Org Video Driver, version 24.0
+[    16.235] (II) NOUVEAU driver 
+[    16.235] (II) NOUVEAU driver for NVIDIA chipset families :
+[    16.235] 	RIVA TNT        (NV04)
+[    16.235] 	RIVA TNT2       (NV05)
+[    16.235] 	GeForce 256     (NV10)
+[    16.235] 	GeForce 2       (NV11, NV15)
+[    16.235] 	GeForce 4MX     (NV17, NV18)
+[    16.235] 	GeForce 3       (NV20)
+[    16.235] 	GeForce 4Ti     (NV25, NV28)
+[    16.235] 	GeForce FX      (NV3x)
+[    16.235] 	GeForce 6       (NV4x)
+[    16.235] 	GeForce 7       (G7x)
+[    16.235] 	GeForce 8       (G8x)
+[    16.235] 	GeForce GTX 200 (NVA0)
+[    16.235] 	GeForce GTX 400 (NVC0)
+[    16.235] (II) modesetting: Driver for Modesetting Kernel Drivers: kms
+[    16.235] (II) FBDEV: driver for framebuffer: fbdev
+[    16.235] (II) VESA: driver for VESA chipsets: vesa
+[    16.237] (II) [drm] nouveau interface version: 1.3.1
+[    16.237] (WW) Falling back to old probe method for modesetting
+[    16.237] (WW) Falling back to old probe method for fbdev
+[    16.237] (II) Loading sub module "fbdevhw"
+[    16.237] (II) LoadModule: "fbdevhw"
+[    16.237] (II) Loading /usr/lib64/xorg/modules/libfbdevhw.so
+[    16.255] (II) Module fbdevhw: vendor="X.Org Foundation"
+[    16.255] 	compiled for 1.20.3, module version = 0.0.2
+[    16.255] 	ABI class: X.Org Video Driver, version 24.0
+[    16.255] (II) Loading sub module "dri2"
+[    16.255] (II) LoadModule: "dri2"
+[    16.255] (II) Module "dri2" already built-in
+[    16.255] (--) NOUVEAU(0): Chipset: "NVIDIA NV117"
+[    16.255] (II) NOUVEAU(0): Creating default Display subsection in Screen section
+	"Default Screen Section" for depth/fbbpp 24/32
+[    16.255] (==) NOUVEAU(0): Depth 24, (--) framebuffer bpp 32
+[    16.255] (==) NOUVEAU(0): RGB weight 888
+[    16.255] (==) NOUVEAU(0): Default visual is TrueColor
+[    16.255] (==) NOUVEAU(0): Using HW cursor
+[    16.255] (==) NOUVEAU(0): Allowed maximum DRI level 2.
+[    16.255] (==) NOUVEAU(0): GLX sync to VBlank enabled.
+[    16.255] (==) NOUVEAU(0): Page flipping enabled
+[    16.255] (==) NOUVEAU(0): Swap limit set to 1 [Max allowed 2]
+[    16.255] (==) NOUVEAU(0): Page flipping synced to vblank by kernel.
+[    16.255] (II) NOUVEAU(0): Initializing outputs ...
+[    16.289] (II) NOUVEAU(0): Output DVI-I-1 has no monitor section
+[    16.290] (II) NOUVEAU(0): Output HDMI-1 has no monitor section
+[    16.352] (II) NOUVEAU(0): Output DP-1 has no monitor section
+[    16.352] (II) NOUVEAU(0): 3 crtcs needed for screen.
+[    16.352] (II) NOUVEAU(0): Allocated crtc nr. 0 to this screen.
+[    16.352] (II) NOUVEAU(0): Allocated crtc nr. 1 to this screen.
+[    16.352] (II) NOUVEAU(0): Allocated crtc nr. 2 to this screen.
+[    16.352] (II) NOUVEAU(0): Allocated crtc nr. 3 to this screen.
+[    16.387] (II) NOUVEAU(0): EDID for output DVI-I-1
+[    16.387] (II) NOUVEAU(0): Manufacturer: PHL  Model: c0c7  Serial#: 22743
+[    16.387] (II) NOUVEAU(0): Year: 2015  Week: 30
+[    16.387] (II) NOUVEAU(0): EDID Version: 1.3
+[    16.387] (II) NOUVEAU(0): Analog Display Input,  Input Voltage Level: 0.700/0.700 V
+[    16.387] (II) NOUVEAU(0): Sync:  Separate  Composite  SyncOnGreen
+[    16.387] (II) NOUVEAU(0): Max Image Size [cm]: horiz.: 51  vert.: 29
+[    16.387] (II) NOUVEAU(0): Gamma: 2.20
+[    16.387] (II) NOUVEAU(0): DPMS capabilities: Off; RGB/Color Display
+[    16.387] (II) NOUVEAU(0): First detailed timing is preferred mode
+[    16.387] (II) NOUVEAU(0): redX: 0.638 redY: 0.334   greenX: 0.309 greenY: 0.627
+[    16.387] (II) NOUVEAU(0): blueX: 0.153 blueY: 0.073   whiteX: 0.313 whiteY: 0.329
+[    16.387] (II) NOUVEAU(0): Supported established timings:
+[    16.387] (II) NOUVEAU(0): 720x400@70Hz
+[    16.387] (II) NOUVEAU(0): 640x480@60Hz
+[    16.387] (II) NOUVEAU(0): 640x480@67Hz
+[    16.387] (II) NOUVEAU(0): 640x480@72Hz
+[    16.387] (II) NOUVEAU(0): 640x480@75Hz
+[    16.387] (II) NOUVEAU(0): 800x600@60Hz
+[    16.387] (II) NOUVEAU(0): 800x600@75Hz
+[    16.387] (II) NOUVEAU(0): 1024x768@60Hz
+[    16.387] (II) NOUVEAU(0): 1024x768@75Hz
+[    16.387] (II) NOUVEAU(0): 1280x1024@75Hz
+[    16.387] (II) NOUVEAU(0): Manufacturer's mask: 0
+[    16.387] (II) NOUVEAU(0): Supported standard timings:
+[    16.387] (II) NOUVEAU(0): #0: hsize: 1920  vsize 1080  refresh: 60  vid: 49361
+[    16.387] (II) NOUVEAU(0): #1: hsize: 1280  vsize 1024  refresh: 60  vid: 32897
+[    16.387] (II) NOUVEAU(0): #2: hsize: 1440  vsize 900  refresh: 75  vid: 3989
+[    16.387] (II) NOUVEAU(0): #3: hsize: 1440  vsize 900  refresh: 60  vid: 149
+[    16.387] (II) NOUVEAU(0): #4: hsize: 1680  vsize 1050  refresh: 60  vid: 179
+[    16.387] (II) NOUVEAU(0): #5: hsize: 1280  vsize 720  refresh: 60  vid: 49281
+[    16.387] (II) NOUVEAU(0): Supported detailed timing:
+[    16.387] (II) NOUVEAU(0): clock: 148.5 MHz   Image Size:  509 x 286 mm
+[    16.387] (II) NOUVEAU(0): h_active: 1920  h_sync: 2008  h_sync_end 2052 h_blank_end 2200 h_border: 0
+[    16.387] (II) NOUVEAU(0): v_active: 1080  v_sync: 1084  v_sync_end 1089 v_blanking: 1125 v_border: 0
+[    16.387] (II) NOUVEAU(0): Serial No: UHB1530022743
+[    16.387] (II) NOUVEAU(0): Monitor name: PHL 234E5
+[    16.387] (II) NOUVEAU(0): Ranges: V min: 56 V max: 76 Hz, H min: 30 H max: 83 kHz, PixClock max 175 MHz
+[    16.387] (II) NOUVEAU(0): EDID (in hex):
+[    16.387] (II) NOUVEAU(0): 	00ffffffffffff00410cc7c0d7580000
+[    16.387] (II) NOUVEAU(0): 	1e1901036e331d782a6275a3554fa027
+[    16.387] (II) NOUVEAU(0): 	125054bd4b00d1c08180950f9500b300
+[    16.387] (II) NOUVEAU(0): 	81c001010101023a801871382d40582c
+[    16.387] (II) NOUVEAU(0): 	4500fd1e1100001e000000ff00554842
+[    16.387] (II) NOUVEAU(0): 	31353330303232373433000000fc0050
+[    16.387] (II) NOUVEAU(0): 	484c2032333445350a202020000000fd
+[    16.387] (II) NOUVEAU(0): 	00384c1e5311000a20202020202000e2
+[    16.387] (II) NOUVEAU(0): Printing probed modes for output DVI-I-1
+[    16.387] (II) NOUVEAU(0): Modeline "1920x1080"x60.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz eP)
+[    16.387] (II) NOUVEAU(0): Modeline "1680x1050"x60.0  146.25  1680 1784 1960 2240  1050 1053 1059 1089 -hsync +vsync (65.3 kHz e)
+[    16.387] (II) NOUVEAU(0): Modeline "1280x1024"x75.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+[    16.387] (II) NOUVEAU(0): Modeline "1280x1024"x60.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[    16.387] (II) NOUVEAU(0): Modeline "1440x900"x75.0  136.75  1440 1536 1688 1936  900 903 909 942 -hsync +vsync (70.6 kHz e)
+[    16.387] (II) NOUVEAU(0): Modeline "1440x900"x59.9  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz e)
+[    16.387] (II) NOUVEAU(0): Modeline "1280x720"x60.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    16.387] (II) NOUVEAU(0): Modeline "1024x768"x75.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+[    16.387] (II) NOUVEAU(0): Modeline "1024x768"x60.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    16.387] (II) NOUVEAU(0): Modeline "800x600"x75.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+[    16.387] (II) NOUVEAU(0): Modeline "800x600"x60.3   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    16.387] (II) NOUVEAU(0): Modeline "640x480"x75.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+[    16.387] (II) NOUVEAU(0): Modeline "640x480"x72.8   31.50  640 664 704 832  480 489 492 520 -hsync -vsync (37.9 kHz e)
+[    16.387] (II) NOUVEAU(0): Modeline "640x480"x66.7   30.24  640 704 768 864  480 483 486 525 -hsync -vsync (35.0 kHz e)
+[    16.387] (II) NOUVEAU(0): Modeline "640x480"x59.9   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    16.387] (II) NOUVEAU(0): Modeline "720x400"x70.1   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+[    16.388] (II) NOUVEAU(0): EDID for output HDMI-1
+[    16.452] (II) NOUVEAU(0): EDID for output DP-1
+[    16.452] (II) NOUVEAU(0): Output DVI-I-1 connected
+[    16.452] (II) NOUVEAU(0): Output HDMI-1 disconnected
+[    16.452] (II) NOUVEAU(0): Output DP-1 disconnected
+[    16.452] (II) NOUVEAU(0): Using exact sizes for initial modes
+[    16.452] (II) NOUVEAU(0): Output DVI-I-1 using initial mode 1920x1080 +0+0
+[    16.452] (==) NOUVEAU(0): Using gamma correction (1.0, 1.0, 1.0)
+[    16.452] (II) NOUVEAU(0): Virtual size is 1920x1080 (pitch 0)
+[    16.452] (**) NOUVEAU(0):  Driver mode "1920x1080": 148.5 MHz (scaled from 0.0 MHz), 67.5 kHz, 60.0 Hz
+[    16.452] (II) NOUVEAU(0): Modeline "1920x1080"x60.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz eP)
+[    16.452] (**) NOUVEAU(0):  Driver mode "1680x1050": 146.2 MHz (scaled from 0.0 MHz), 65.3 kHz, 60.0 Hz
+[    16.452] (II) NOUVEAU(0): Modeline "1680x1050"x60.0  146.25  1680 1784 1960 2240  1050 1053 1059 1089 -hsync +vsync (65.3 kHz e)
+[    16.452] (**) NOUVEAU(0):  Driver mode "1280x1024": 135.0 MHz (scaled from 0.0 MHz), 80.0 kHz, 75.0 Hz
+[    16.452] (II) NOUVEAU(0): Modeline "1280x1024"x75.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+[    16.452] (**) NOUVEAU(0):  Driver mode "1280x1024": 108.0 MHz (scaled from 0.0 MHz), 64.0 kHz, 60.0 Hz
+[    16.452] (II) NOUVEAU(0): Modeline "1280x1024"x60.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[    16.452] (**) NOUVEAU(0):  Driver mode "1440x900": 136.8 MHz (scaled from 0.0 MHz), 70.6 kHz, 75.0 Hz
+[    16.452] (II) NOUVEAU(0): Modeline "1440x900"x75.0  136.75  1440 1536 1688 1936  900 903 909 942 -hsync +vsync (70.6 kHz e)
+[    16.452] (**) NOUVEAU(0):  Driver mode "1440x900": 106.5 MHz (scaled from 0.0 MHz), 55.9 kHz, 59.9 Hz
+[    16.452] (II) NOUVEAU(0): Modeline "1440x900"x59.9  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz e)
+[    16.452] (**) NOUVEAU(0):  Driver mode "1280x720": 74.2 MHz (scaled from 0.0 MHz), 45.0 kHz, 60.0 Hz
+[    16.452] (II) NOUVEAU(0): Modeline "1280x720"x60.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    16.452] (**) NOUVEAU(0):  Driver mode "1024x768": 78.8 MHz (scaled from 0.0 MHz), 60.0 kHz, 75.0 Hz
+[    16.452] (II) NOUVEAU(0): Modeline "1024x768"x75.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+[    16.452] (**) NOUVEAU(0):  Driver mode "1024x768": 65.0 MHz (scaled from 0.0 MHz), 48.4 kHz, 60.0 Hz
+[    16.452] (II) NOUVEAU(0): Modeline "1024x768"x60.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    16.452] (**) NOUVEAU(0):  Driver mode "800x600": 49.5 MHz (scaled from 0.0 MHz), 46.9 kHz, 75.0 Hz
+[    16.452] (II) NOUVEAU(0): Modeline "800x600"x75.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+[    16.452] (**) NOUVEAU(0):  Driver mode "800x600": 40.0 MHz (scaled from 0.0 MHz), 37.9 kHz, 60.3 Hz
+[    16.452] (II) NOUVEAU(0): Modeline "800x600"x60.3   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    16.452] (**) NOUVEAU(0):  Driver mode "640x480": 31.5 MHz (scaled from 0.0 MHz), 37.5 kHz, 75.0 Hz
+[    16.452] (II) NOUVEAU(0): Modeline "640x480"x75.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+[    16.452] (**) NOUVEAU(0):  Driver mode "640x480": 31.5 MHz (scaled from 0.0 MHz), 37.9 kHz, 72.8 Hz
+[    16.452] (II) NOUVEAU(0): Modeline "640x480"x72.8   31.50  640 664 704 832  480 489 492 520 -hsync -vsync (37.9 kHz e)
+[    16.452] (**) NOUVEAU(0):  Driver mode "640x480": 30.2 MHz (scaled from 0.0 MHz), 35.0 kHz, 66.7 Hz
+[    16.452] (II) NOUVEAU(0): Modeline "640x480"x66.7   30.24  640 704 768 864  480 483 486 525 -hsync -vsync (35.0 kHz e)
+[    16.452] (**) NOUVEAU(0):  Driver mode "640x480": 25.2 MHz (scaled from 0.0 MHz), 31.5 kHz, 59.9 Hz
+[    16.452] (II) NOUVEAU(0): Modeline "640x480"x59.9   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    16.452] (**) NOUVEAU(0):  Driver mode "720x400": 28.3 MHz (scaled from 0.0 MHz), 31.5 kHz, 70.1 Hz
+[    16.452] (II) NOUVEAU(0): Modeline "720x400"x70.1   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+[    16.452] (==) NOUVEAU(0): DPI set to (96, 96)
+[    16.452] (II) Loading sub module "fb"
+[    16.452] (II) LoadModule: "fb"
+[    16.452] (II) Loading /usr/lib64/xorg/modules/libfb.so
+[    16.488] (II) Module fb: vendor="X.Org Foundation"
+[    16.489] 	compiled for 1.20.3, module version = 1.0.0
+[    16.489] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    16.489] (II) Loading sub module "shadowfb"
+[    16.489] (II) LoadModule: "shadowfb"
+[    16.489] (II) Loading /usr/lib64/xorg/modules/libshadowfb.so
+[    16.489] (II) Module shadowfb: vendor="X.Org Foundation"
+[    16.489] 	compiled for 1.20.3, module version = 1.0.0
+[    16.489] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    16.489] (II) UnloadModule: "modesetting"
+[    16.489] (II) Unloading modesetting
+[    16.489] (II) UnloadModule: "fbdev"
+[    16.489] (II) Unloading fbdev
+[    16.489] (II) UnloadSubModule: "fbdevhw"
+[    16.489] (II) Unloading fbdevhw
+[    16.489] (II) UnloadModule: "vesa"
+[    16.489] (II) Unloading vesa
+[    16.490] (II) NOUVEAU(0): Channel setup complete.
+[    16.490] (II) NOUVEAU(0): [COPY] async initialised.
+[    16.490] (II) NOUVEAU(0): Hardware support for Present enabled
+[    16.490] (II) NOUVEAU(0): [DRI2] Setup complete
+[    16.490] (II) NOUVEAU(0): [DRI2]   DRI driver: nouveau
+[    16.490] (II) NOUVEAU(0): [DRI2]   VDPAU driver: nouveau
+[    16.490] (II) Loading sub module "exa"
+[    16.490] (II) LoadModule: "exa"
+[    16.490] (II) Loading /usr/lib64/xorg/modules/libexa.so
+[    16.505] (II) Module exa: vendor="X.Org Foundation"
+[    16.505] 	compiled for 1.20.3, module version = 2.6.0
+[    16.505] 	ABI class: X.Org Video Driver, version 24.0
+[    16.505] (II) EXA(0): Driver allocated offscreen pixmaps
+[    16.505] (II) EXA(0): Driver registered support for the following operations:
+[    16.505] (II)         Solid
+[    16.505] (II)         Copy
+[    16.505] (II)         Composite (RENDER acceleration)
+[    16.505] (II)         UploadToScreen
+[    16.505] (II)         DownloadFromScreen
+[    16.505] (==) NOUVEAU(0): Backing store enabled
+[    16.505] (==) NOUVEAU(0): Silken mouse enabled
+[    16.505] (II) NOUVEAU(0): [XvMC] Associated with Nouveau GeForce 8/9 Textured Video.
+[    16.505] (II) NOUVEAU(0): [XvMC] Extension initialized.
+[    16.505] (==) NOUVEAU(0): DPMS enabled
+[    16.505] (II) Initializing extension Generic Event Extension
+[    16.505] (II) Initializing extension SHAPE
+[    16.505] (II) Initializing extension MIT-SHM
+[    16.505] (II) Initializing extension XInputExtension
+[    16.505] (II) Initializing extension XTEST
+[    16.505] (II) Initializing extension BIG-REQUESTS
+[    16.505] (II) Initializing extension SYNC
+[    16.506] (II) Initializing extension XKEYBOARD
+[    16.506] (II) Initializing extension XC-MISC
+[    16.506] (II) Initializing extension SECURITY
+[    16.506] (II) Initializing extension XFIXES
+[    16.506] (II) Initializing extension RENDER
+[    16.506] (II) Initializing extension RANDR
+[    16.506] (II) Initializing extension COMPOSITE
+[    16.506] (II) Initializing extension DAMAGE
+[    16.506] (II) Initializing extension MIT-SCREEN-SAVER
+[    16.506] (II) Initializing extension DOUBLE-BUFFER
+[    16.506] (II) Initializing extension RECORD
+[    16.506] (II) Initializing extension DPMS
+[    16.507] (II) Initializing extension Present
+[    16.507] (II) Initializing extension DRI3
+[    16.507] (II) Initializing extension X-Resource
+[    16.507] (II) Initializing extension XVideo
+[    16.507] (II) Initializing extension XVideo-MotionCompensation
+[    16.507] (II) Initializing extension GLX
+[    16.516] (EE) AIGLX error: dlopen of /usr/lib64/dri/nouveau_dri.so failed (/usr/lib64/dri/nouveau_dri.so: cannot open shared object file: No such file or directory)
+[    16.516] (EE) AIGLX error: unable to load driver nouveau
+[    17.573] (II) IGLX: Loaded and initialized swrast
+[    17.573] (II) GLX: Initialized DRISWRAST GL provider for screen 0
+[    17.573] (II) Initializing extension XFree86-VidModeExtension
+[    17.573] (II) Initializing extension XFree86-DGA
+[    17.573] (II) Initializing extension XFree86-DRI
+[    17.573] (II) Initializing extension DRI2
+[    17.576] (II) NOUVEAU(0): NVEnterVT is called.
+[    17.609] (II) NOUVEAU(0): Setting screen physical size to 508 x 285
+[    17.609] resize called 1920 1080
+[    17.935] (II) config/udev: Adding input device Power Button (/dev/input/event1)
+[    17.935] (**) Power Button: Applying InputClass "evdev keyboard catchall"
+[    17.935] (**) Power Button: Applying InputClass "system-keyboard"
+[    17.935] (**) Power Button: Applying InputClass "evdev keyboard catchall"
+[    17.935] (**) Power Button: Applying InputClass "libinput keyboard catchall"
+[    17.935] (II) LoadModule: "libinput"
+[    17.935] (II) Loading /usr/lib64/xorg/modules/input/libinput_drv.so
+[    17.982] (II) Module libinput: vendor="X.Org Foundation"
+[    17.982] 	compiled for 1.20.3, module version = 0.28.1
+[    17.982] 	Module class: X.Org XInput Driver
+[    17.982] 	ABI class: X.Org XInput driver, version 24.1
+[    17.982] (II) Using input driver 'libinput' for 'Power Button'
+[    17.982] (**) Power Button: always reports core events
+[    17.982] (**) Option "Device" "/dev/input/event1"
+[    17.982] (**) Option "_source" "server/udev"
+[    17.983] (II) event1  - Power Button: is tagged by udev as: Keyboard
+[    17.983] (II) event1  - Power Button: device is a keyboard
+[    17.983] (II) event1  - Power Button: device removed
+[    17.996] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXPWRBN:00/input/input1/event1"
+[    17.996] (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 6)
+[    17.996] (**) Option "xkb_model" "pc105"
+[    17.996] (**) Option "xkb_layout" "us,ru"
+[    17.996] (**) Option "xkb_variant" ",winkeys"
+[    17.996] (**) Option "xkb_options" "terminate:ctrl_alt_bksp,grp:ctrl_shift_toggle,grp_led:scroll"
+[    18.011] (II) event1  - Power Button: is tagged by udev as: Keyboard
+[    18.011] (II) event1  - Power Button: device is a keyboard
+[    18.012] (II) config/udev: Adding input device Power Button (/dev/input/event0)
+[    18.012] (**) Power Button: Applying InputClass "evdev keyboard catchall"
+[    18.012] (**) Power Button: Applying InputClass "system-keyboard"
+[    18.012] (**) Power Button: Applying InputClass "evdev keyboard catchall"
+[    18.012] (**) Power Button: Applying InputClass "libinput keyboard catchall"
+[    18.012] (II) Using input driver 'libinput' for 'Power Button'
+[    18.012] (**) Power Button: always reports core events
+[    18.012] (**) Option "Device" "/dev/input/event0"
+[    18.012] (**) Option "_source" "server/udev"
+[    18.012] (II) event0  - Power Button: is tagged by udev as: Keyboard
+[    18.012] (II) event0  - Power Button: device is a keyboard
+[    18.012] (II) event0  - Power Button: device removed
+[    18.032] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0/event0"
+[    18.032] (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 7)
+[    18.032] (**) Option "xkb_model" "pc105"
+[    18.032] (**) Option "xkb_layout" "us,ru"
+[    18.032] (**) Option "xkb_variant" ",winkeys"
+[    18.032] (**) Option "xkb_options" "terminate:ctrl_alt_bksp,grp:ctrl_shift_toggle,grp_led:scroll"
+[    18.032] (II) event0  - Power Button: is tagged by udev as: Keyboard
+[    18.032] (II) event0  - Power Button: device is a keyboard
+[    18.033] (II) config/udev: Adding input device HDA NVidia HDMI/DP,pcm=3 (/dev/input/event15)
+[    18.033] (II) No input driver specified, ignoring this device.
+[    18.033] (II) This device may have been added with another device file.
+[    18.033] (II) config/udev: Adding input device HDA NVidia HDMI/DP,pcm=7 (/dev/input/event16)
+[    18.033] (II) No input driver specified, ignoring this device.
+[    18.033] (II) This device may have been added with another device file.
+[    18.033] (II) config/udev: Adding input device HDA NVidia HDMI/DP,pcm=8 (/dev/input/event17)
+[    18.033] (II) No input driver specified, ignoring this device.
+[    18.033] (II) This device may have been added with another device file.
+[    18.033] (II) config/udev: Adding input device HDA NVidia HDMI/DP,pcm=9 (/dev/input/event18)
+[    18.033] (II) No input driver specified, ignoring this device.
+[    18.033] (II) This device may have been added with another device file.
+[    18.033] (II) config/udev: Adding input device HDA NVidia HDMI/DP,pcm=10 (/dev/input/event19)
+[    18.033] (II) No input driver specified, ignoring this device.
+[    18.033] (II) This device may have been added with another device file.
+[    18.034] (II) config/udev: Adding input device HDA NVidia HDMI/DP,pcm=11 (/dev/input/event20)
+[    18.034] (II) No input driver specified, ignoring this device.
+[    18.034] (II) This device may have been added with another device file.
+[    18.034] (II) config/udev: Adding input device HDA Intel PCH Front Mic (/dev/input/event22)
+[    18.034] (II) No input driver specified, ignoring this device.
+[    18.034] (II) This device may have been added with another device file.
+[    18.034] (II) config/udev: Adding input device HDA Intel PCH Rear Mic (/dev/input/event23)
+[    18.034] (II) No input driver specified, ignoring this device.
+[    18.034] (II) This device may have been added with another device file.
+[    18.034] (II) config/udev: Adding input device HDA Intel PCH Line (/dev/input/event24)
+[    18.034] (II) No input driver specified, ignoring this device.
+[    18.034] (II) This device may have been added with another device file.
+[    18.034] (II) config/udev: Adding input device HDA Intel PCH Line Out (/dev/input/event25)
+[    18.034] (II) No input driver specified, ignoring this device.
+[    18.034] (II) This device may have been added with another device file.
+[    18.035] (II) config/udev: Adding input device HDA Intel PCH Front Headphone (/dev/input/event26)
+[    18.035] (II) No input driver specified, ignoring this device.
+[    18.035] (II) This device may have been added with another device file.
+[    18.035] (II) config/udev: Adding input device COMPANY USB Device (/dev/input/event2)
+[    18.035] (**) COMPANY USB Device: Applying InputClass "evdev keyboard catchall"
+[    18.035] (**) COMPANY USB Device: Applying InputClass "system-keyboard"
+[    18.035] (**) COMPANY USB Device: Applying InputClass "evdev keyboard catchall"
+[    18.035] (**) COMPANY USB Device: Applying InputClass "libinput keyboard catchall"
+[    18.035] (II) Using input driver 'libinput' for 'COMPANY USB Device'
+[    18.035] (**) COMPANY USB Device: always reports core events
+[    18.035] (**) Option "Device" "/dev/input/event2"
+[    18.035] (**) Option "_source" "server/udev"
+[    18.035] (II) event2  - COMPANY USB Device: is tagged by udev as: Keyboard
+[    18.035] (II) event2  - COMPANY USB Device: device is a keyboard
+[    18.035] (II) event2  - COMPANY USB Device: device removed
+[    18.048] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.3/2-1.3:1.0/0003:09DA:F613.0001/input/input2/event2"
+[    18.048] (II) XINPUT: Adding extended input device "COMPANY USB Device" (type: KEYBOARD, id 8)
+[    18.048] (**) Option "xkb_model" "pc105"
+[    18.048] (**) Option "xkb_layout" "us,ru"
+[    18.048] (**) Option "xkb_variant" ",winkeys"
+[    18.048] (**) Option "xkb_options" "terminate:ctrl_alt_bksp,grp:ctrl_shift_toggle,grp_led:scroll"
+[    18.048] (II) event2  - COMPANY USB Device: is tagged by udev as: Keyboard
+[    18.048] (II) event2  - COMPANY USB Device: device is a keyboard
+[    18.049] (II) config/udev: Adding input device COMPANY USB Device (/dev/input/event3)
+[    18.049] (**) COMPANY USB Device: Applying InputClass "evdev pointer catchall"
+[    18.049] (**) COMPANY USB Device: Applying InputClass "evdev pointer catchall"
+[    18.049] (**) COMPANY USB Device: Applying InputClass "libinput pointer catchall"
+[    18.049] (II) Using input driver 'libinput' for 'COMPANY USB Device'
+[    18.049] (**) COMPANY USB Device: always reports core events
+[    18.049] (**) Option "Device" "/dev/input/event3"
+[    18.049] (**) Option "_source" "server/udev"
+[    18.108] (II) event3  - COMPANY USB Device: is tagged by udev as: Mouse
+[    18.108] (II) event3  - COMPANY USB Device: device is a pointer
+[    18.108] (II) event3  - COMPANY USB Device: device removed
+[    18.140] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.3/2-1.3:1.1/0003:09DA:F613.0002/input/input3/event3"
+[    18.140] (II) XINPUT: Adding extended input device "COMPANY USB Device" (type: MOUSE, id 9)
+[    18.140] (**) Option "AccelerationScheme" "none"
+[    18.140] (**) COMPANY USB Device: (accel) selected scheme none/0
+[    18.140] (**) COMPANY USB Device: (accel) acceleration factor: 2.000
+[    18.140] (**) COMPANY USB Device: (accel) acceleration threshold: 4
+[    18.200] (II) event3  - COMPANY USB Device: is tagged by udev as: Mouse
+[    18.200] (II) event3  - COMPANY USB Device: device is a pointer
+[    18.200] (II) config/udev: Adding input device COMPANY USB Device (/dev/input/mouse0)
+[    18.200] (II) No input driver specified, ignoring this device.
+[    18.200] (II) This device may have been added with another device file.
+[    18.201] (II) config/udev: Adding input device COMPANY USB Device Keyboard (/dev/input/event4)
+[    18.201] (**) COMPANY USB Device Keyboard: Applying InputClass "evdev keyboard catchall"
+[    18.201] (**) COMPANY USB Device Keyboard: Applying InputClass "system-keyboard"
+[    18.201] (**) COMPANY USB Device Keyboard: Applying InputClass "evdev keyboard catchall"
+[    18.201] (**) COMPANY USB Device Keyboard: Applying InputClass "libinput keyboard catchall"
+[    18.201] (II) Using input driver 'libinput' for 'COMPANY USB Device Keyboard'
+[    18.201] (**) COMPANY USB Device Keyboard: always reports core events
+[    18.201] (**) Option "Device" "/dev/input/event4"
+[    18.201] (**) Option "_source" "server/udev"
+[    18.201] (II) event4  - COMPANY USB Device Keyboard: is tagged by udev as: Keyboard
+[    18.201] (II) event4  - COMPANY USB Device Keyboard: device is a keyboard
+[    18.201] (II) event4  - COMPANY USB Device Keyboard: device removed
+[    18.216] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.3/2-1.3:1.2/0003:09DA:F613.0003/input/input4/event4"
+[    18.216] (II) XINPUT: Adding extended input device "COMPANY USB Device Keyboard" (type: KEYBOARD, id 10)
+[    18.216] (**) Option "xkb_model" "pc105"
+[    18.216] (**) Option "xkb_layout" "us,ru"
+[    18.216] (**) Option "xkb_variant" ",winkeys"
+[    18.216] (**) Option "xkb_options" "terminate:ctrl_alt_bksp,grp:ctrl_shift_toggle,grp_led:scroll"
+[    18.216] (II) event4  - COMPANY USB Device Keyboard: is tagged by udev as: Keyboard
+[    18.216] (II) event4  - COMPANY USB Device Keyboard: device is a keyboard
+[    18.217] (II) config/udev: Adding input device COMPANY USB Device System Control (/dev/input/event5)
+[    18.217] (**) COMPANY USB Device System Control: Applying InputClass "evdev keyboard catchall"
+[    18.217] (**) COMPANY USB Device System Control: Applying InputClass "system-keyboard"
+[    18.217] (**) COMPANY USB Device System Control: Applying InputClass "evdev keyboard catchall"
+[    18.217] (**) COMPANY USB Device System Control: Applying InputClass "libinput keyboard catchall"
+[    18.217] (II) Using input driver 'libinput' for 'COMPANY USB Device System Control'
+[    18.217] (**) COMPANY USB Device System Control: always reports core events
+[    18.217] (**) Option "Device" "/dev/input/event5"
+[    18.217] (**) Option "_source" "server/udev"
+[    18.217] (II) event5  - COMPANY USB Device System Control: is tagged by udev as: Keyboard
+[    18.217] (II) event5  - COMPANY USB Device System Control: device is a keyboard
+[    18.217] (II) event5  - COMPANY USB Device System Control: device removed
+[    18.232] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.3/2-1.3:1.2/0003:09DA:F613.0003/input/input5/event5"
+[    18.232] (II) XINPUT: Adding extended input device "COMPANY USB Device System Control" (type: KEYBOARD, id 11)
+[    18.232] (**) Option "xkb_model" "pc105"
+[    18.232] (**) Option "xkb_layout" "us,ru"
+[    18.232] (**) Option "xkb_variant" ",winkeys"
+[    18.232] (**) Option "xkb_options" "terminate:ctrl_alt_bksp,grp:ctrl_shift_toggle,grp_led:scroll"
+[    18.232] (II) event5  - COMPANY USB Device System Control: is tagged by udev as: Keyboard
+[    18.232] (II) event5  - COMPANY USB Device System Control: device is a keyboard
+[    18.233] (II) config/udev: Adding input device COMPANY USB Device Consumer Control (/dev/input/event6)
+[    18.233] (**) COMPANY USB Device Consumer Control: Applying InputClass "evdev keyboard catchall"
+[    18.233] (**) COMPANY USB Device Consumer Control: Applying InputClass "system-keyboard"
+[    18.233] (**) COMPANY USB Device Consumer Control: Applying InputClass "evdev keyboard catchall"
+[    18.233] (**) COMPANY USB Device Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    18.233] (II) Using input driver 'libinput' for 'COMPANY USB Device Consumer Control'
+[    18.233] (**) COMPANY USB Device Consumer Control: always reports core events
+[    18.233] (**) Option "Device" "/dev/input/event6"
+[    18.233] (**) Option "_source" "server/udev"
+[    18.233] (II) event6  - COMPANY USB Device Consumer Control: is tagged by udev as: Keyboard
+[    18.233] (II) event6  - COMPANY USB Device Consumer Control: device is a keyboard
+[    18.233] (II) event6  - COMPANY USB Device Consumer Control: device removed
+[    18.248] (II) libinput: COMPANY USB Device Consumer Control: needs a virtual subdevice
+[    18.248] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.3/2-1.3:1.2/0003:09DA:F613.0003/input/input6/event6"
+[    18.248] (II) XINPUT: Adding extended input device "COMPANY USB Device Consumer Control" (type: MOUSE, id 12)
+[    18.248] (**) Option "AccelerationScheme" "none"
+[    18.248] (**) COMPANY USB Device Consumer Control: (accel) selected scheme none/0
+[    18.248] (**) COMPANY USB Device Consumer Control: (accel) acceleration factor: 2.000
+[    18.248] (**) COMPANY USB Device Consumer Control: (accel) acceleration threshold: 4
+[    18.248] (II) event6  - COMPANY USB Device Consumer Control: is tagged by udev as: Keyboard
+[    18.248] (II) event6  - COMPANY USB Device Consumer Control: device is a keyboard
+[    18.249] (II) config/udev: Adding input device COMPANY USB Device (/dev/input/event7)
+[    18.249] (II) No input driver specified, ignoring this device.
+[    18.249] (II) This device may have been added with another device file.
+[    18.249] (II) config/udev: Adding input device COMPANY USB Device (/dev/input/event8)
+[    18.249] (**) COMPANY USB Device: Applying InputClass "evdev keyboard catchall"
+[    18.249] (**) COMPANY USB Device: Applying InputClass "system-keyboard"
+[    18.249] (**) COMPANY USB Device: Applying InputClass "evdev keyboard catchall"
+[    18.249] (**) COMPANY USB Device: Applying InputClass "libinput keyboard catchall"
+[    18.249] (II) Using input driver 'libinput' for 'COMPANY USB Device'
+[    18.249] (**) COMPANY USB Device: always reports core events
+[    18.249] (**) Option "Device" "/dev/input/event8"
+[    18.249] (**) Option "_source" "server/udev"
+[    18.250] (II) event8  - COMPANY USB Device: is tagged by udev as: Keyboard
+[    18.250] (II) event8  - COMPANY USB Device: device is a keyboard
+[    18.250] (II) event8  - COMPANY USB Device: device removed
+[    18.264] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.5/2-1.5:1.0/0003:09DA:F624.0004/input/input8/event8"
+[    18.264] (II) XINPUT: Adding extended input device "COMPANY USB Device" (type: KEYBOARD, id 13)
+[    18.264] (**) Option "xkb_model" "pc105"
+[    18.264] (**) Option "xkb_layout" "us,ru"
+[    18.264] (**) Option "xkb_variant" ",winkeys"
+[    18.264] (**) Option "xkb_options" "terminate:ctrl_alt_bksp,grp:ctrl_shift_toggle,grp_led:scroll"
+[    18.264] (II) event8  - COMPANY USB Device: is tagged by udev as: Keyboard
+[    18.264] (II) event8  - COMPANY USB Device: device is a keyboard
+[    18.265] (II) config/udev: Adding input device COMPANY USB Device (/dev/input/event9)
+[    18.265] (**) COMPANY USB Device: Applying InputClass "evdev pointer catchall"
+[    18.265] (**) COMPANY USB Device: Applying InputClass "evdev pointer catchall"
+[    18.265] (**) COMPANY USB Device: Applying InputClass "libinput pointer catchall"
+[    18.265] (II) Using input driver 'libinput' for 'COMPANY USB Device'
+[    18.265] (**) COMPANY USB Device: always reports core events
+[    18.265] (**) Option "Device" "/dev/input/event9"
+[    18.265] (**) Option "_source" "server/udev"
+[    18.324] (II) event9  - COMPANY USB Device: is tagged by udev as: Mouse
+[    18.324] (II) event9  - COMPANY USB Device: device is a pointer
+[    18.324] (II) event9  - COMPANY USB Device: device removed
+[    18.356] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.5/2-1.5:1.1/0003:09DA:F624.0005/input/input9/event9"
+[    18.356] (II) XINPUT: Adding extended input device "COMPANY USB Device" (type: MOUSE, id 14)
+[    18.356] (**) Option "AccelerationScheme" "none"
+[    18.356] (**) COMPANY USB Device: (accel) selected scheme none/0
+[    18.356] (**) COMPANY USB Device: (accel) acceleration factor: 2.000
+[    18.356] (**) COMPANY USB Device: (accel) acceleration threshold: 4
+[    18.416] (II) event9  - COMPANY USB Device: is tagged by udev as: Mouse
+[    18.416] (II) event9  - COMPANY USB Device: device is a pointer
+[    18.416] (II) config/udev: Adding input device COMPANY USB Device (/dev/input/mouse1)
+[    18.417] (II) No input driver specified, ignoring this device.
+[    18.417] (II) This device may have been added with another device file.
+[    18.417] (II) config/udev: Adding input device COMPANY USB Device Keyboard (/dev/input/event10)
+[    18.417] (**) COMPANY USB Device Keyboard: Applying InputClass "evdev keyboard catchall"
+[    18.417] (**) COMPANY USB Device Keyboard: Applying InputClass "system-keyboard"
+[    18.417] (**) COMPANY USB Device Keyboard: Applying InputClass "evdev keyboard catchall"
+[    18.417] (**) COMPANY USB Device Keyboard: Applying InputClass "libinput keyboard catchall"
+[    18.417] (II) Using input driver 'libinput' for 'COMPANY USB Device Keyboard'
+[    18.417] (**) COMPANY USB Device Keyboard: always reports core events
+[    18.417] (**) Option "Device" "/dev/input/event10"
+[    18.417] (**) Option "_source" "server/udev"
+[    18.417] (II) event10 - COMPANY USB Device Keyboard: is tagged by udev as: Keyboard
+[    18.417] (II) event10 - COMPANY USB Device Keyboard: device is a keyboard
+[    18.417] (II) event10 - COMPANY USB Device Keyboard: device removed
+[    18.432] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.5/2-1.5:1.2/0003:09DA:F624.0006/input/input10/event10"
+[    18.432] (II) XINPUT: Adding extended input device "COMPANY USB Device Keyboard" (type: KEYBOARD, id 15)
+[    18.432] (**) Option "xkb_model" "pc105"
+[    18.432] (**) Option "xkb_layout" "us,ru"
+[    18.432] (**) Option "xkb_variant" ",winkeys"
+[    18.432] (**) Option "xkb_options" "terminate:ctrl_alt_bksp,grp:ctrl_shift_toggle,grp_led:scroll"
+[    18.432] (II) event10 - COMPANY USB Device Keyboard: is tagged by udev as: Keyboard
+[    18.432] (II) event10 - COMPANY USB Device Keyboard: device is a keyboard
+[    18.433] (II) config/udev: Adding input device COMPANY USB Device System Control (/dev/input/event11)
+[    18.433] (**) COMPANY USB Device System Control: Applying InputClass "evdev keyboard catchall"
+[    18.433] (**) COMPANY USB Device System Control: Applying InputClass "system-keyboard"
+[    18.433] (**) COMPANY USB Device System Control: Applying InputClass "evdev keyboard catchall"
+[    18.433] (**) COMPANY USB Device System Control: Applying InputClass "libinput keyboard catchall"
+[    18.433] (II) Using input driver 'libinput' for 'COMPANY USB Device System Control'
+[    18.433] (**) COMPANY USB Device System Control: always reports core events
+[    18.433] (**) Option "Device" "/dev/input/event11"
+[    18.433] (**) Option "_source" "server/udev"
+[    18.433] (II) event11 - COMPANY USB Device System Control: is tagged by udev as: Keyboard
+[    18.433] (II) event11 - COMPANY USB Device System Control: device is a keyboard
+[    18.433] (II) event11 - COMPANY USB Device System Control: device removed
+[    18.448] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.5/2-1.5:1.2/0003:09DA:F624.0006/input/input11/event11"
+[    18.448] (II) XINPUT: Adding extended input device "COMPANY USB Device System Control" (type: KEYBOARD, id 16)
+[    18.448] (**) Option "xkb_model" "pc105"
+[    18.448] (**) Option "xkb_layout" "us,ru"
+[    18.448] (**) Option "xkb_variant" ",winkeys"
+[    18.448] (**) Option "xkb_options" "terminate:ctrl_alt_bksp,grp:ctrl_shift_toggle,grp_led:scroll"
+[    18.448] (II) event11 - COMPANY USB Device System Control: is tagged by udev as: Keyboard
+[    18.448] (II) event11 - COMPANY USB Device System Control: device is a keyboard
+[    18.449] (II) config/udev: Adding input device COMPANY USB Device Consumer Control (/dev/input/event12)
+[    18.449] (**) COMPANY USB Device Consumer Control: Applying InputClass "evdev keyboard catchall"
+[    18.449] (**) COMPANY USB Device Consumer Control: Applying InputClass "system-keyboard"
+[    18.449] (**) COMPANY USB Device Consumer Control: Applying InputClass "evdev keyboard catchall"
+[    18.449] (**) COMPANY USB Device Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    18.449] (II) Using input driver 'libinput' for 'COMPANY USB Device Consumer Control'
+[    18.449] (**) COMPANY USB Device Consumer Control: always reports core events
+[    18.449] (**) Option "Device" "/dev/input/event12"
+[    18.449] (**) Option "_source" "server/udev"
+[    18.449] (II) event12 - COMPANY USB Device Consumer Control: is tagged by udev as: Keyboard
+[    18.449] (II) event12 - COMPANY USB Device Consumer Control: device is a keyboard
+[    18.449] (II) event12 - COMPANY USB Device Consumer Control: device removed
+[    18.464] (II) libinput: COMPANY USB Device Consumer Control: needs a virtual subdevice
+[    18.464] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.5/2-1.5:1.2/0003:09DA:F624.0006/input/input12/event12"
+[    18.464] (II) XINPUT: Adding extended input device "COMPANY USB Device Consumer Control" (type: MOUSE, id 17)
+[    18.464] (**) Option "AccelerationScheme" "none"
+[    18.464] (**) COMPANY USB Device Consumer Control: (accel) selected scheme none/0
+[    18.464] (**) COMPANY USB Device Consumer Control: (accel) acceleration factor: 2.000
+[    18.464] (**) COMPANY USB Device Consumer Control: (accel) acceleration threshold: 4
+[    18.464] (II) event12 - COMPANY USB Device Consumer Control: is tagged by udev as: Keyboard
+[    18.464] (II) event12 - COMPANY USB Device Consumer Control: device is a keyboard
+[    18.465] (II) config/udev: Adding input device COMPANY USB Device (/dev/input/event13)
+[    18.465] (II) No input driver specified, ignoring this device.
+[    18.465] (II) This device may have been added with another device file.
+[    18.465] (II) config/udev: Adding input device Eee PC WMI hotkeys (/dev/input/event21)
+[    18.465] (**) Eee PC WMI hotkeys: Applying InputClass "evdev keyboard catchall"
+[    18.465] (**) Eee PC WMI hotkeys: Applying InputClass "system-keyboard"
+[    18.465] (**) Eee PC WMI hotkeys: Applying InputClass "evdev keyboard catchall"
+[    18.465] (**) Eee PC WMI hotkeys: Applying InputClass "libinput keyboard catchall"
+[    18.465] (II) Using input driver 'libinput' for 'Eee PC WMI hotkeys'
+[    18.465] (**) Eee PC WMI hotkeys: always reports core events
+[    18.465] (**) Option "Device" "/dev/input/event21"
+[    18.465] (**) Option "_source" "server/udev"
+[    18.465] (II) event21 - Eee PC WMI hotkeys: is tagged by udev as: Keyboard
+[    18.465] (II) event21 - Eee PC WMI hotkeys: device is a keyboard
+[    18.465] (II) event21 - Eee PC WMI hotkeys: device removed
+[    18.496] (**) Option "config_info" "udev:/sys/devices/platform/eeepc-wmi/input/input21/event21"
+[    18.496] (II) XINPUT: Adding extended input device "Eee PC WMI hotkeys" (type: KEYBOARD, id 18)
+[    18.496] (**) Option "xkb_model" "pc105"
+[    18.496] (**) Option "xkb_layout" "us,ru"
+[    18.496] (**) Option "xkb_variant" ",winkeys"
+[    18.496] (**) Option "xkb_options" "terminate:ctrl_alt_bksp,grp:ctrl_shift_toggle,grp_led:scroll"
+[    18.496] (II) event21 - Eee PC WMI hotkeys: is tagged by udev as: Keyboard
+[    18.496] (II) event21 - Eee PC WMI hotkeys: device is a keyboard
+[    18.496] (II) config/udev: Adding input device PC Speaker (/dev/input/event14)
+[    18.497] (II) No input driver specified, ignoring this device.
+[    18.497] (II) This device may have been added with another device file.
+[    18.500] (**) COMPANY USB Device Consumer Control: Applying InputClass "evdev keyboard catchall"
+[    18.500] (**) COMPANY USB Device Consumer Control: Applying InputClass "system-keyboard"
+[    18.500] (**) COMPANY USB Device Consumer Control: Applying InputClass "evdev keyboard catchall"
+[    18.500] (**) COMPANY USB Device Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    18.500] (II) Using input driver 'libinput' for 'COMPANY USB Device Consumer Control'
+[    18.500] (**) COMPANY USB Device Consumer Control: always reports core events
+[    18.500] (**) Option "Device" "/dev/input/event6"
+[    18.500] (**) Option "_source" "_driver/libinput"
+[    18.500] (II) libinput: COMPANY USB Device Consumer Control: is a virtual subdevice
+[    18.500] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.3/2-1.3:1.2/0003:09DA:F613.0003/input/input6/event6"
+[    18.500] (II) XINPUT: Adding extended input device "COMPANY USB Device Consumer Control" (type: KEYBOARD, id 19)
+[    18.500] (**) Option "xkb_model" "pc105"
+[    18.500] (**) Option "xkb_layout" "us,ru"
+[    18.500] (**) Option "xkb_variant" ",winkeys"
+[    18.500] (**) Option "xkb_options" "terminate:ctrl_alt_bksp,grp:ctrl_shift_toggle,grp_led:scroll"
+[    18.500] (**) COMPANY USB Device Consumer Control: Applying InputClass "evdev keyboard catchall"
+[    18.500] (**) COMPANY USB Device Consumer Control: Applying InputClass "system-keyboard"
+[    18.500] (**) COMPANY USB Device Consumer Control: Applying InputClass "evdev keyboard catchall"
+[    18.500] (**) COMPANY USB Device Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    18.500] (II) Using input driver 'libinput' for 'COMPANY USB Device Consumer Control'
+[    18.500] (**) COMPANY USB Device Consumer Control: always reports core events
+[    18.500] (**) Option "Device" "/dev/input/event12"
+[    18.500] (**) Option "_source" "_driver/libinput"
+[    18.500] (II) libinput: COMPANY USB Device Consumer Control: is a virtual subdevice
+[    18.500] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.5/2-1.5:1.2/0003:09DA:F624.0006/input/input12/event12"
+[    18.500] (II) XINPUT: Adding extended input device "COMPANY USB Device Consumer Control" (type: KEYBOARD, id 20)
+[    18.500] (**) Option "xkb_model" "pc105"
+[    18.500] (**) Option "xkb_layout" "us,ru"
+[    18.501] (**) Option "xkb_variant" ",winkeys"
+[    18.501] (**) Option "xkb_options" "terminate:ctrl_alt_bksp,grp:ctrl_shift_toggle,grp_led:scroll"
+[    26.660] (II) NOUVEAU(0): EDID vendor "PHL", prod id 49351
+[    26.660] (II) NOUVEAU(0): Using EDID range info for horizontal sync
+[    26.660] (II) NOUVEAU(0): Using EDID range info for vertical refresh
+[    26.660] (II) NOUVEAU(0): Printing DDC gathered Modelines:
+[    26.660] (II) NOUVEAU(0): Modeline "1920x1080"x0.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz eP)
+[    26.660] (II) NOUVEAU(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    26.660] (II) NOUVEAU(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+[    26.660] (II) NOUVEAU(0): Modeline "640x480"x0.0   31.50  640 664 704 832  480 489 492 520 -hsync -vsync (37.9 kHz e)
+[    26.660] (II) NOUVEAU(0): Modeline "640x480"x0.0   30.24  640 704 768 864  480 483 486 525 -hsync -vsync (35.0 kHz e)
+[    26.660] (II) NOUVEAU(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    26.660] (II) NOUVEAU(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+[    26.660] (II) NOUVEAU(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+[    26.660] (II) NOUVEAU(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+[    26.660] (II) NOUVEAU(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    26.660] (II) NOUVEAU(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+[    26.660] (II) NOUVEAU(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[    26.660] (II) NOUVEAU(0): Modeline "1440x900"x0.0  136.75  1440 1536 1688 1936  900 903 909 942 -hsync +vsync (70.6 kHz e)
+[    26.660] (II) NOUVEAU(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz e)
+[    26.660] (II) NOUVEAU(0): Modeline "1680x1050"x0.0  146.25  1680 1784 1960 2240  1050 1053 1059 1089 -hsync +vsync (65.3 kHz e)
+[    26.660] (II) NOUVEAU(0): Modeline "1280x720"x60.0   74.48  1280 1336 1472 1664  720 721 724 746 -hsync +vsync (44.8 kHz e)
+[    26.998] (II) NOUVEAU(0): EDID vendor "PHL", prod id 49351
+[    26.998] (II) NOUVEAU(0): Using hsync ranges from config file
+[    26.998] (II) NOUVEAU(0): Using vrefresh ranges from config file
+[    26.998] (II) NOUVEAU(0): Printing DDC gathered Modelines:
+[    26.998] (II) NOUVEAU(0): Modeline "1920x1080"x0.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz eP)
+[    26.998] (II) NOUVEAU(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    26.998] (II) NOUVEAU(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+[    26.998] (II) NOUVEAU(0): Modeline "640x480"x0.0   31.50  640 664 704 832  480 489 492 520 -hsync -vsync (37.9 kHz e)
+[    26.998] (II) NOUVEAU(0): Modeline "640x480"x0.0   30.24  640 704 768 864  480 483 486 525 -hsync -vsync (35.0 kHz e)
+[    26.998] (II) NOUVEAU(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    26.998] (II) NOUVEAU(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+[    26.998] (II) NOUVEAU(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+[    26.998] (II) NOUVEAU(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+[    26.998] (II) NOUVEAU(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    26.998] (II) NOUVEAU(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+[    26.998] (II) NOUVEAU(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[    26.998] (II) NOUVEAU(0): Modeline "1440x900"x0.0  136.75  1440 1536 1688 1936  900 903 909 942 -hsync +vsync (70.6 kHz e)
+[    26.998] (II) NOUVEAU(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz e)
+[    26.998] (II) NOUVEAU(0): Modeline "1680x1050"x0.0  146.25  1680 1784 1960 2240  1050 1053 1059 1089 -hsync +vsync (65.3 kHz e)
+[    26.998] (II) NOUVEAU(0): Modeline "1280x720"x60.0   74.48  1280 1336 1472 1664  720 721 724 746 -hsync +vsync (44.8 kHz e)
+[   470.261] nouveau_exa_upload_to_screen:380 - falling back to memcpy ignores tiling
