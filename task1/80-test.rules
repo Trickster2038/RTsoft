@@ -1,1 +1,1 @@
-SUBSYSTEM=="usb", ACTION == "ADD", ENV{DEVTYPE}=="usb_device", RUN+="/bin/copylog.sh"
+ACTION=="add", ATTRS{serial}=="408D5CBEC94AB471998546ED",RUN+="/usr/bin/add_trigger.sh"
