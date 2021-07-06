@@ -41,11 +41,11 @@ while cap.isOpened():
     x,y,w,h = cv.boundingRect(cnt)
     cv.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
 
-    # rect = cv.minAreaRect(cnt)
-    # box = cv.boxPoints(rect)
-    # box = np.int0(box)
+    rect = cv.minAreaRect(cnt)
+    box = cv.boxPoints(rect)
+    box = np.int0(box)
     # cv.drawContours(img,[box],0,(0,0,255),2)
-    cv.drawContours(img, contours, -1, (0, 255, 0), 3)
+    # cv.drawContours(img, contours, -1, (0, 255, 0), 3)
 
     # cv.imshow('frame', img)
 
@@ -54,6 +54,11 @@ while cap.isOpened():
     cv.RETR_EXTERNAL, cv.CHAIN_APPROX_NONE)
     # cv.imshow('Canny Edges After Contouring', edged)
     cv.drawContours(frame, contours[0:7], -1, (0, 255, 0), 3)
+
+    for cnt in contours[0:3]:
+        x,y,w,h = cv.boundingRect(cnt)
+        cv.rectangle(frame,(x,y),(x+w,y+h),(0,0,255),2)
+
     cv.imshow('Contours', frame)
 
     # ================  
