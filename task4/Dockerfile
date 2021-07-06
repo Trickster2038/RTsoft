@@ -1,9 +1,11 @@
-FROM ubuntu
-COPY src etc/cvexample
+FROM python:3.9.1
 RUN apt-get update
-# RUN apt-get install -y python3-opencv
-# RUN apt-get install ffmpeg libsm6 libxext6  -y
-RUN apt install libgl1-mesa-glx -y
-RUN apt install python3-pip -y
-RUN pip install opencv-python
-CMD python3 etc/cvexample/main.py
+ADD src /cvexample
+# WORKDIR /cvexample
+# RUN apt install -y apparmor apturl
+# RUN /usr/local/bin/python -m pip install --upgrade pip
+# RUN pip install -r requirements.txt
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir opencv-python
+RUN apt-get install ffmpeg libsm6 libxext6  -y
+CMD python3 cvexample/main.py

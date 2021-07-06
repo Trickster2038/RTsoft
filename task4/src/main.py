@@ -2,6 +2,8 @@ import cv2 as cv
 import numpy as np
 import time
 
+print("hello from CV app")
+
 cap = cv.VideoCapture('test.mp4')
 while cap.isOpened():
     ret, frame = cap.read()
@@ -48,3 +50,5 @@ while cap.isOpened():
 
 cap.release()
 cv.destroyAllWindows()
+
+print("buy from CV app")
