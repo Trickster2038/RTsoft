@@ -2,4 +2,7 @@
 
 task1(udev) - сделано
 
-task2(driver) - в процессе
+task2(driver) - сделано
+
+task3(docker) - сделано
+
