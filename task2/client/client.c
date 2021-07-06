@@ -9,7 +9,7 @@
 int main(){
     int fd;
 
-    fd = open("/dev/test237", O_RDONLY);
+    fd = open("/dev/test", O_RDONLY);
     while(1) {
         sleep(1);
         unsigned int t = 123;
