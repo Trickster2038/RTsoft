@@ -102,8 +102,11 @@ device_write( struct file *filp, const char *buff, size_t len, loff_t * off )
 static ssize_t device_read(struct file *filp, char *buffer, size_t length,
 			   loff_t *offset)
 {
-	size_t read = sprintf(buffer, "%d\n", counter++);
-    //printk( "Read driver tick.\n" );
-    //*buffer = 2;
-	return read;
+	//size_t read = sprintf(buffer, "%d\n", counter++);
+    //return read;
+
+    sprintf(buffer, "%d\n", counter++);
+    printk( "Read driver tick.\n" );
+    put_user( counter , buffer);
+    return counter;
 }
