@@ -7,9 +7,9 @@
 
 // Ниже мы задаём информацию о модуле, которую можно будет увидеть с помощью Modinfo
 MODULE_LICENSE( "GPL" );
-MODULE_AUTHOR( "Alex Petrov <petroff.alex@gmail.com>" );
+MODULE_AUTHOR( "Sergey Astakhov <fzastahov@gmail.com>" );
 MODULE_DESCRIPTION( "My nice module" );
-MODULE_SUPPORTED_DEVICE( "test" ); /* /dev/testdevice */
+// MODULE_SUPPORTED_DEVICE( "test" ); /* /dev/testdevice */
 
 #define SUCCESS 0
 #define DEVICE_NAME "test" /* Имя нашего устройства */
@@ -25,6 +25,7 @@ static int major_number; /* Старший номер устройства на�
 static int is_device_open = 0; /* Используется ли девайс ? */
 static char text[ 5 ] = "test\n"; /* Текст, который мы будет отдавать при обращении к нашему устройству */
 static char* text_ptr = text; /* Указатель на текущую позицию в тексте */
+static int counter = 0;
 
 // Прописываем обработчики операций на устройством
 static struct file_operations fops =
@@ -96,22 +97,10 @@ device_write( struct file *filp, const char *buff, size_t len, loff_t * off )
  return -EINVAL;
 }
 
-static ssize_t device_read( struct file *filp, /* include/linux/fs.h */
-       char *buffer, /* buffer */
-       size_t length, /* buffer length */
-       loff_t * offset )
+static ssize_t device_read(struct file *filp, char *buffer, size_t length,
+			   loff_t *offset)
 {
- int byte_read = 0;
+	size_t read = sprintf(buffer, "%d\n", counter++);
 
- if ( *text_ptr == 0 )
-  return 0;
-
- while ( length && *text_ptr )
- {
-  put_user( *( text_ptr++ ), buffer++ );
-  length--;
-  byte_read++;
- }
-
- return byte_read;
+	return read;
 }
