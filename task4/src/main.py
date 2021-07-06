@@ -6,6 +6,7 @@ print("hello from CV app")
 
 cap = cv.VideoCapture('test.mp4')
 while cap.isOpened():
+    print("CV-loop")
     ret, frame = cap.read()
 
     # resize ====================
