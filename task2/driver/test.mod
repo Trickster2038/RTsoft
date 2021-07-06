@@ -1,2 +1,2 @@
-/home/trickster/RTsoft/task2/test.o
+/home/trickster/RTsoft/task2/driver/test.o
 

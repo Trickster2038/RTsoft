@@ -39,7 +39,7 @@ static struct file_operations fops =
 // Функция загрузки модуля. Входная точка. Можем считать что это наш main()
 static int __init test_init( void )
 {
- printk( KERN_ALERT "TEST driver loaded!\n" );
+ printk( KERN_ALERT "TEST driver loaded 2!\n" );
 
  // Регистрируем устройсво и получаем старший номер устройства
  major_number = register_chrdev( 0, DEVICE_NAME, &fops );
@@ -73,6 +73,7 @@ module_exit( test_exit );
 
 static int device_open( struct inode *inode, struct file *file )
 {
+ printk( "Open driver tick.\n" );
  text_ptr = text;
 
  if ( is_device_open )
@@ -85,6 +86,7 @@ static int device_open( struct inode *inode, struct file *file )
 
 static int device_release( struct inode *inode, struct file *file )
 {
+ printk( "Release driver tick.\n" );
  is_device_open--;
  return SUCCESS;
 }
@@ -101,6 +103,7 @@ static ssize_t device_read(struct file *filp, char *buffer, size_t length,
 			   loff_t *offset)
 {
 	size_t read = sprintf(buffer, "%d\n", counter++);
-
+    //printk( "Read driver tick.\n" );
+    //*buffer = 2;
 	return read;
 }

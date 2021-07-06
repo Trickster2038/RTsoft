@@ -9,14 +9,15 @@
 int main(){
     int fd;
 
-    fd = open("dev/test", O_RDONLY);
+    fd = open("dev/test237", O_RDONLY);
     while(1) {
         sleep(1);
         unsigned int t;
+        unsigned int t2;
         char c;
         char c2;
-        c2 = read(fd, &t, sizeof(t));
+        t2 = read(fd, &t, sizeof(t));
         //cout << t << "\n";
-        printf("%d \n", t);
+        printf("%d \n", t2);
     }
 }
