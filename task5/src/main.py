@@ -2,6 +2,7 @@ import cv2 as cv
 import numpy as np
 import time
 from collections import deque
+import paho.mqtt.client as mqtt
 
 def running_mean(x, N):
     """ 
@@ -69,9 +70,19 @@ def get_contours(img, N):
 
 
 if __name__ == "__main__":
+
     print("hello from CV app")
     pts = deque(maxlen=124)
     cap = cv.VideoCapture('test2.mp4')
+    i = 0
+
+    client = mqtt.Client("cvSubscriber1")
+    status = client.connect("localhost")
+    if status == 0:
+        print("MQQT connected")
+    else:
+        print("MQQT is down")
+
     while cap.isOpened():
         # print("CV-loop")
         ret, frame = cap.read()
@@ -99,6 +110,11 @@ if __name__ == "__main__":
         avg_pts = pts_avg(pts, 10)
         # draw_track(pts, 1, (0,0, 255))
         draw_track(avg_pts, 2, (0,255,0))
+
+        i += 1
+        if i % 10 == 0:
+            # print(avg_pts[0])
+            client.publish("cv/track", str(avg_pts[0]))
 
         # =========================== 
 
