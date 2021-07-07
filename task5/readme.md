@@ -16,7 +16,7 @@ $ cd src
 $ python3 main.py
 ```
 
-Установите клиента MQTT
+Установите клиент MQTT
 
 ```
 $ sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
@@ -24,7 +24,7 @@ $ sudo apt-get update
 $ sudo apt-get install mosquitto mosquitto-clients
 ```
 
-Запустите клиента MQTT с темой cv/track
+Запустите клиент MQTT с темой cv/track
 
 ```
 $ mosquitto_sub -h localhost -t cv/track
