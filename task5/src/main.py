@@ -1,8 +1,11 @@
 import cv2 as cv
 import numpy as np
 import time
+from collections import deque
 
 print("hello from CV app")
+
+pts = deque(maxlen=124)
 
 cap = cv.VideoCapture('test2.mp4')
 while cap.isOpened():
@@ -44,6 +47,15 @@ while cap.isOpened():
         x,y,w,h = cv.boundingRect(cnt)
         if frame.shape[1]/w < 30 and frame.shape[0]/h < 30:
             cv.rectangle(frame,(x,y),(x+w,y+h),(0,0,255),2)
+            center=(int(x+w/2),int(y+h/2))
+            pts.appendleft(center)
+
+    for i in range(1,len(pts)):
+                if pts[i-1]is None or pts[i]is None:
+                    continue
+                thickness = int(np.sqrt(64 / float(i + 1)) * 1)
+                if thickness > 0:
+                    cv.line(frame, pts[i - 1], pts[i], (0, 0, 255), thickness)
     cv.imshow('Contours', frame)
 
     # =========================== 
