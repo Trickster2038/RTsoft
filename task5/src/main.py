@@ -43,7 +43,7 @@ def draw_track(pts, k, color):
     for i in range(1,len(pts)):
             if pts[i-1]is None or pts[i]is None:
                 continue
-            thickness = int(np.sqrt(64 / float(i + 1)) * k)
+            thickness = int(np.sqrt(64 / float(i + 1)) * k - k)
             if thickness > 0:
                 cv.line(frame, pts[i - 1], pts[i], color, thickness)
     cv.imshow('Contours', frame)
@@ -65,6 +65,8 @@ def get_contours(img, N):
     contours, hierarchy = cv.findContours(edged, \
     cv.RETR_EXTERNAL, cv.CHAIN_APPROX_NONE)
     return contours[0:N]
+
+
 
 if __name__ == "__main__":
     print("hello from CV app")
@@ -90,13 +92,13 @@ if __name__ == "__main__":
         for cnt in contours2:
             x,y,w,h = cv.boundingRect(cnt)
             if frame.shape[1]/w < 30 and frame.shape[0]/h < 30: # check that frame is huge enough
-                cv.rectangle(frame,(x,y),(x+w,y+h),(0,0,255),2) # draw rectangles
+                cv.rectangle(frame,(x,y),(x+w,y+h),(0,0,200),2) # draw rectangles
                 center=(int(x+w/2),int(y+h/2)) # count center
                 pts.appendleft(center) # add center to track 
 
         avg_pts = pts_avg(pts, 10)
-        draw_track(pts, 1, (0,0, 255))
-        draw_track(avg_pts, 2, (255,0,0))
+        # draw_track(pts, 1, (0,0, 255))
+        draw_track(avg_pts, 2, (0,255,0))
 
         # =========================== 
 
@@ -107,5 +109,4 @@ if __name__ == "__main__":
 
     cap.release()
     cv.destroyAllWindows()
-
-    print("buy from CV app")
+    print("good bye from CV app")
