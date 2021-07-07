@@ -3,6 +3,7 @@ import numpy as np
 import time
 from collections import deque
 import paho.mqtt.client as mqtt
+import json
 
 def running_mean(x, N):
     """ 
@@ -114,7 +115,13 @@ if __name__ == "__main__":
         i += 1
         if i % 10 == 0:
             # print(avg_pts[0])
-            client.publish("cv/track", str(avg_pts[0]))
+            x = list(pts[0])[0]
+            y = list(pts[0])[1]
+            x_avg = list(avg_pts[0])[0]
+            y_avg = list(avg_pts[0])[1]
+            msg = json.dumps({"x":x, "y":y, "x corrected":x_avg, "y corrected": y_avg})
+            # client.publish("cv/track", str(avg_pts[0]))
+            client.publish("cv/track", msg)
 
         # =========================== 
 
