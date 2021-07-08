@@ -4,3 +4,4 @@
 (optional) run kafka/mqtt sub
 4) run influxdb
 5) run telegraf
+6) run grafana

@@ -113,7 +113,7 @@ if __name__ == "__main__":
         draw_track(avg_pts, 2, (0,255,0))
 
         i += 1
-        if i % 10 == 0:
+        if i % 1 == 0:
             # print(avg_pts[0])
             x = list(pts[0])[0]
             y = list(pts[0])[1]

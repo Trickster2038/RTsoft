@@ -32,7 +32,9 @@ while True:
         "measurement": "cv_measurement",
         "fields":{
             "x": msg_json['x corrected'],
-            "y": msg_json['y corrected']
+            "y": msg_json['y corrected'],
+            "xbad": msg_json['x'],
+            "ybad": msg_json['y'],
             }
         }
          ]
