@@ -1,0 +1,4 @@
+1) run kafka service
+2) run bridge
+3) run main
+(optional) run kafka/mqtt sub
