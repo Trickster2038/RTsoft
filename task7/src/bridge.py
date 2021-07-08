@@ -2,6 +2,8 @@ import paho.mqtt.client as mqtt
 from pykafka import KafkaClient
 import time
 
+print("mqtt -> kafka bridge init")
+
 mqtt_broker = "localhost"
 mqtt_client = mqtt.Client("BridgeMQTT2Kafka")
 mqtt_client.connect(mqtt_broker)

@@ -2,3 +2,5 @@
 2) run bridge
 3) run main
 (optional) run kafka/mqtt sub
+4) run influxdb
+5) run telegraf
