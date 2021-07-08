@@ -9,3 +9,5 @@ task3(docker) - сделано
 task4(open cv) - сделано, но без docker
 
 task5(open cv + mqtt) - сделано
+
+task6(kafka) - сделано, но без docker
