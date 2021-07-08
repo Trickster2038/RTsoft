@@ -16,7 +16,7 @@ def on_message(client, userdata, message):
     msg_payload = message.payload.decode("utf-8") 
     print("Received MQTT message: ", msg_payload)
     kafka_producer.produce(msg_payload.encode('ascii'))
-    print("KAFKA: Just published " + msg_payload + "cvcoords")
+    print("KAFKA: Just published " + msg_payload)
 
 mqtt_client.subscribe("cvtrack")
 mqtt_client.on_message = on_message
