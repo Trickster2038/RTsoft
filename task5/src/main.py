@@ -109,7 +109,7 @@ if __name__ == "__main__":
                 pts.appendleft(center) # add center to track 
 
         avg_pts = pts_avg(pts, 10)
-        # draw_track(pts, 1, (0,0, 255))
+        # draw_track(pts, 1, (255,0, 0))
         draw_track(avg_pts, 2, (0,255,0))
 
         i += 1
