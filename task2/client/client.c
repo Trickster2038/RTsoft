@@ -14,9 +14,8 @@ int main(){
         sleep(1);
         unsigned int t = 123;
         unsigned int t2 = 456;
-        char c;
-        char c2;
-        t2 = read(fd, &t, sizeof(c));
+
+        t2 = read(fd, &t, sizeof(t));
 
         printf("%d\n", t2);
     }
