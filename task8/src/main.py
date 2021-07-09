@@ -4,6 +4,17 @@ import time
 from collections import deque
 import paho.mqtt.client as mqtt
 import json
+import requests
+
+def get_http_cmd():
+    req = requests.get('http://localhost:8000')
+    body = json.loads(req.content.decode('utf-8'))
+    if req.status_code == 200:
+        mode = body["mode"]
+    else:
+        mode = 'play'
+    return mode
+
 
 def running_mean(x, N):
     """ 
@@ -85,6 +96,7 @@ if __name__ == "__main__":
         print("MQQT is down")
 
     while cap.isOpened():
+
         # print("CV-loop")
         ret, frame = cap.read()
 
@@ -125,6 +137,11 @@ if __name__ == "__main__":
             # print("MQTT send: ", msg)
 
         # =========================== 
+
+        while get_http_cmd() == 'pause':
+            time.sleep(0.5)
+
+        # ===========================
 
         # makes video slower
         time.sleep(0.1)
