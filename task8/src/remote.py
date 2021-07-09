@@ -4,14 +4,14 @@ import json
 
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
-    # def __init__(self):
     mode = 'play'
 
     def do_GET(self):
         self.send_response(200)
         self.end_headers()
-        self.wfile.write(b'Hello, world!')
-        self.wfile.write(bytes(SimpleHTTPRequestHandler.mode, 'utf-8'))
+        msg_json = json.dumps({"mode": SimpleHTTPRequestHandler.mode})
+        msg_bytes = bytes(msg_json, 'utf-8')
+        self.wfile.write(msg_bytes)
 
     def do_POST(self):
         content_length = int(self.headers['Content-Length'])
@@ -19,8 +19,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.end_headers()
         response = BytesIO()
-        response.write(b'This is POST request. ')
-        response.write(b'Received: ')
+        response.write(b'Post requests received: ')
 
         cmd = json.loads(body.decode('utf-8'))
 
@@ -29,15 +28,12 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         if cmd["mode"] == 'play' or cmd["mode"] == 'pause':
             SimpleHTTPRequestHandler.mode = cmd["mode"]
 
-        # print(response.getvalue())
-        print("got POST req")
-        self.wfile.write(response.getvalue())
+        print("got POST request")
 
 
 httpd = HTTPServer(('localhost', 8000), SimpleHTTPRequestHandler)
 
 httpd.serve_forever()
 
-# print("server init")
 # res = bytes(test_string, 'utf-8')
 # string = bytesObj.decode('utf-8')
