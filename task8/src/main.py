@@ -138,8 +138,16 @@ if __name__ == "__main__":
 
         # =========================== 
 
+        fl_log = True
+
         while get_http_cmd() == 'pause':
             time.sleep(0.5)
+            if fl_log:
+                print("paused")
+                fl_log = False
+
+        if not fl_log:
+            print("played") 
 
         # ===========================
 
