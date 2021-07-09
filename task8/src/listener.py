@@ -8,5 +8,6 @@ while True:
 	body = json.loads(req.content.decode('utf-8'))
 	mode = body["mode"]
 
-	print("Got from server: ")
+	print("\nGot from server: ")
 	print(mode)
+	print(req.status_code)
