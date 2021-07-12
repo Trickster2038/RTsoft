@@ -15,3 +15,5 @@ task6(kafka) - сделано, но без docker
 task7(cv + mqtt + kafka + indluxDB + grafana) - сделано, но без docker 
 
 task8(cv + rest) - сделано
+
+Финальный проект: https://github.com/Trickster2038/RTsoftCw
